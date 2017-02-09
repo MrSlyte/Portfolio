@@ -1,0 +1,44 @@
+/*-----GLOBAL-----*/
+*{margin: 0;padding: 0;}
+body{font-family: 'Open Sans';font-weight: 400;font-size: 14px;}
+h3{text-align: center;margin-top: 5%;}
+
+header {
+    text-align: center;
+    background-image: url('../img/notebookBg.jpg');
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+}
+header .logo{float: left;}
+header .logo img{transition-duration: 0.5s;transition-property: all;}
+header .logo img:hover{opacity: 0.5;}
+header ul{list-style: none;padding: 5px;float: right;margin-top: 2%;}
+header ul li{margin-left: 20px;display: inline-block;}
+header ul li a{text-decoration: none;color: white;transition-duration: 0.3s;transition-property: all;}
+header ul li a:hover{color: #999999;text-decoration: none;}
+header h1{text-align: center;color: #ffffff;margin-bottom: 1%;margin-top: 10%;text-transform: uppercase;}
+header p{text-align: center;color: #ffffff;margin-bottom: 1%;text-transform: uppercase;}
+header a i{color: #ffffff;width: 50px;height: 50px;border: solid 1px #ffffff;border-radius: 120px;margin: 0 auto;padding-top: 10px;transition-duration: 0.4s;transition-property: all;text-decoration: none;margin-bottom: 10%;margin-left: 1%;}
+header a i:hover{color: #999999;text-decoration: none;border: solid 1px #999999}
+
+main{}
+.news{text-align: center;}
+.news article{width: 250px;text-align: justify;display: inline-block;margin-left: 50px;}
+.news article img{border: solid 1px black;}
+
+.about{text-align: center;}
+.about button{background-color: transparent;width: 150px;text-align: center;border: solid 1px black;padding: 10px;transition-duration: 0.3s;transition-property: background-color;}
+.about button:hover{background-color: #999}
+
+footer {text-align: center;margin: 0 auto;display: block;padding-bottom: 50px;margin-top: 5%;background-color: #ccccff}
+footer img{margin-bottom: 2%;}
+.circles i{border: solid 1px black;width: 100px; height: 100px;margin-top: 20%;text-align: center;border-radius: 100%;padding-top: 20px;}
+.circles img{border: solid 1px black;width: 150px; height: 150px;margin-top: 10%;text-align: center;border-radius: 100%;}
+circles span{text-align: center;}
+.circles{display: block;margin: 0 auto;text-align: center;}
+.clear{clear: both;}
+.colSkill{text-align: left !important;}
+.progress{width: 70% !important;}

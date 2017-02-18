@@ -13,7 +13,7 @@ header {
     background-position: top center;
 }
 header .logo{float: left;}
-header .logo img{transition-duration: 0.5s;transition-property: all;}
+header .logo img{transition-duration: 0.5s;transition-property: all;width: 100px;margin-top: 10%;}
 header .logo img:hover{opacity: 0.5;}
 header ul{list-style: none;padding: 5px;float: right;margin-top: 2%;}
 header ul li{margin-left: 20px;display: inline-block;}
@@ -34,7 +34,7 @@ main{}
 .about button:hover{background-color: #999}
 
 footer {text-align: center;margin: 0 auto;display: block;padding-bottom: 50px;margin-top: 5%;background-color: #ccccff}
-footer img{margin-bottom: 2%;}
+footer img{margin-bottom: 2%;width: 100px;margin-top: 5%;}
 .circles i{border: solid 1px black;width: 100px; height: 100px;margin-top: 20%;text-align: center;border-radius: 100%;padding-top: 20px;}
 .circles img{border: solid 1px black;width: 150px; height: 150px;margin-top: 10%;text-align: center;border-radius: 100%;}
 circles span{text-align: center;}

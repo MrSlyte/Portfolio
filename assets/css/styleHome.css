@@ -29,7 +29,7 @@ main{}
 .news article{width: 250px;text-align: justify;display: inline-block;margin-left: 50px;}
 .news article img{border: solid 1px black;}
 
-.about{text-align: center;}
+.about{text-align: center;margin-bottom: 5%;}
 .about button{background-color: transparent;width: 150px;text-align: center;border: solid 1px black;padding: 10px;transition-duration: 0.3s;transition-property: background-color;}
 .about button:hover{background-color: #999}
 

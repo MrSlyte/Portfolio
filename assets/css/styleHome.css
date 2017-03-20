@@ -42,3 +42,25 @@ circles span{text-align: center;}
 .clear{clear: both;}
 .colSkill{text-align: left !important;}
 .progress{width: 70% !important;}
+
+.form{
+    float: left;
+    margin-left: auto;
+    width: 40%;
+    padding: 0;
+    margin: 0;
+    margin-right: auto;
+}
+.formVisualize h4{
+    text-align: center;
+}
+.formVisualize{
+    padding: 1%;
+    text-align: left;
+    float: right;
+    border: solid 1px #000000;
+    width: 40%;
+    height: 380px;
+    background-color: #f8f870;
+    display: block;
+}

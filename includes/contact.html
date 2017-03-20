@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="portfolio">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +23,7 @@
         <![endif]-->
 
     </head>
-    <body>
+    <body ng-controller="portfolioCtrl">
         <header>
             <div class="container">
 
@@ -44,20 +44,72 @@
             <div class="container">
                 <section class="about">
                     <h3>Contato</h3>
+                    <div class="form">
                         <div class="row">
-                            <h4>Em breve!</h4>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>Seu nome:</label>
+                                    <input type="text" name="formNome" class="form-control" placeholder="Digite seu nome" ng-model="formNome" />
+                                </div>
+                            </div>
                         </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>E-mail</label>
+                                    <input type="text" name="formMail" class="form-control" placeholder="Digite seu e-mail" ng-model="formMail" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+
+                                    <label>Assunto:</label>
+                                    <input type="text" name="formAssunto" class="form-control" placeholder="Digite seu nome" ng-model="formAssunto" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label>Sua mensagem:</label>
+                                    <textarea name="formMsg" class="form-control" placeholder="Digite seu nome" ng-model="formMsg" rows="5"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="formVisualize">
+                        <h4>Visualize sua mensagem aqui!</h4>
+                        <div class="form-group">
+                            <span class="formNome">{{"Nome: "+ formNome}}</span>
+                        </div>
+                        <div class="form-group">
+                            <span class="formEmail">{{"E-mail: "+ formMail}}</span>
+                        </div>
+                        <div class="form-group">
+                            <span class="formAssunto">{{"Assunto: "+ formAssunto}}</span>
+                        </div>
+                        <div class="form-group">
+                            Mensagem:<br>
+                            Olá, Leonardo!
+                            <br>
+                            <span class="formMsg">{{formMsg}}</span>
+                        </div>
+                    </div>
                 </section>
             </div>
         </main>
-<footer>
-    <img src="../assets/img/logo.svg"><br>
-    <span>2017 - Todos os direitos reservados.</span>
-</footer>
+        <footer>
+            <img src="../assets/img/logo.svg"><br>
+            <span>2017 - Todos os direitos reservados.</span>
+        </footer>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../assets/js/angular.min.js"></script>
+        <script src="../assets/js/angular-route.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="../assets/js/app.js"></script>
+    </body>
 </html>

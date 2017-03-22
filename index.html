@@ -31,10 +31,10 @@
 
                 <div class="logo"><img src="assets/img/logo.svg"></div>
                 <ul>
-                    <li><a href="index.html">Página inicial</a></li>
-                    <li><a href="includes/about.html">Quem sou</a></li>
-                    <li><a href="includes/portfolio.html">Portfólio</a></li>
-                    <li><a href="includes/contact.html">Contato</a></li>
+                    <li><a href="#/">Página inicial</a></li>
+                    <li><a href="#sobre">Quem sou</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
                 <div class="clear"></div>
                 <h1><strong>Leonardo</strong> R. Castellano</h1>
@@ -43,42 +43,8 @@
             </div>
         </header>
         <main>
-            <div class="library"></div>
-            <div class="container">
-                <div class="row">
-                    <section class="circles">
-                        <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4">
-                            <img src="assets/img/heart.png"><br>
-                            <span>Amor pela área</span>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4">
-                            <img src="assets/img/code.jpeg"><br>
-                            <span>Trabalhar com perfeição</span>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-12 col-lg-4">
-                            <img src="assets/img/book.png"><br>
-                            <span>Estudar diariamente</span>
-                        </div>
-                    </section>
-                </div>
-
-                <section class="about">
-
-                    <h3>Sobre mim!</h3>
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <p>
-                                Olá! Meu nome é Leonardo Rocha. Atualmente atuo na área de 
-                                programação, especificamente com back-end. Sou extremamente pró-ativo, 
-                                gosto de me comunicar quando vejo problemas, ajudo onde é necessário e
-                                gosto do que faço.
-                            </p>
-                        </div>
-                        <div class="col-md-3"></div>
-                    </div>
-                    <a href="includes/about.html" class="button">Saiba mais</a>
-                </section>
-            </div>
+            <div ng-view></div>
+            
         </main>
         <footer>
             <img src="assets/img/logo.svg"><br>
@@ -91,5 +57,6 @@
         <script src="assets/js/angular-route.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="assets/js/app.js"></script>
+        <script src="assets/js/config.js"></script>
     </body>
 </html>

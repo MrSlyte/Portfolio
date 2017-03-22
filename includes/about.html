@@ -1,97 +1,38 @@
-<!DOCTYPE html>
-<html lang="pt-br" ng-app="portfolio">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Olá! Este é meu portfólio pessoal. Entre e conheça um pouco do meu trabalho, garanto que vale muito a pena.">
-        <meta property="og:url" content="https://mrslyte.github.io/Portfolio/index.html" />
-        <meta property="og:type" content="profile" />
-        <meta property="og:title" content="Leonardo Rocha - Portfólio pessoal" />
-        <meta property="og:description" content="Olá! Este é meu portfólio pessoal. Entre e conheça um pouco do meu trabalho, garanto que vale muito a pena." />
-        <meta property="og:image" content="http://imgur.com/a/PQaP7" />
-        <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
-        <title>Leonardo Rocha - Sobre mim</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-        <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
-        <link href="../assets/css/styleHome.css" rel="stylesheet">
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-    <body ng-controller="portfolioCtrl">
-        <header>
-            <div class="container">
-
-                <div class="logo"><img src="../assets/img/logo.svg"></div>
-                <ul>
-                    <li><a href="../index.html">Página inicial</a></li>
-                    <li><a href="about.html">Quem sou</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contact.html">Contato</a></li>
-                </ul>
-                <div class="clear"></div>
-                <h1><strong>Leonardo</strong> R. Castellano</h1>
-                <p>O impossível é o que ainda não tentei.</p>
-                <a href="https://github.com/MrSlyte/" target="_blank"><i class="fa fa-github-alt fa-2x"></i></a>
+<div class="container">
+    <section class="about">
+        <h3>Sobre mim!</h3>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <p>
+                    Olá! Meu nome é Leonardo Rocha. Atualmente atuo na área de 
+                    programação, especificamente com back-end. Sou extremamente pró-ativo, 
+                    gosto de me comunicar quando vejo problemas, ajudo onde é necessário e
+                    gosto do que faço.
+                    Gosto também de um bom copo de café logo de manhã <i class="fa fa-coffee"></i>,
+                    estou sempre estudando e aprimorando meus conhecimentos. Eu poderia colocar 
+                    dezenas de qualidades e defeitos aqui, mas, acredito que vendo as habilidades abaixo
+                    você terá uma boa base sobre mim!
+                </p>
             </div>
-        </header>
-        <main>
-            <div class="container">
-                <section class="about">
-                    <h3>Sobre mim!</h3>
+        </div>
+        <div class="container">
+            <div ng-repeat="context in sections">
+                <article class="{{context.section}}">
+                    <h4>{{context.section}}</h4>
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <p>
-                                Olá! Meu nome é Leonardo Rocha. Atualmente atuo na área de 
-                                programação, especificamente com back-end. Sou extremamente pró-ativo, 
-                                gosto de me comunicar quando vejo problemas, ajudo onde é necessário e
-                                gosto do que faço.
-                                Gosto também de um bom copo de café logo de manhã <i class="fa fa-coffee"></i>,
-                                estou sempre estudando e aprimorando meus conhecimentos. Eu poderia colocar 
-                                dezenas de qualidades e defeitos aqui, mas, acredito que vendo as habilidades abaixo
-                                você terá uma boa base sobre mim!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div ng-repeat="context in sections">
-                            <article class="{{context.section}}">
-                                <h4>{{context.section}}</h4>
-                                <div class="row">
-                                    <div ng-repeat="content in context.content">
-                                        <div class="col-md-5 col-md-offset-1 colSkill">
-                                            <span>{{content.nome}}</span>
-                                            <div class="progress">
-                                                <div class="progress-bar progress-bar-striped" style="width: {{content.porcentagem}}%;">
-                                                    {{content.porcentagem}}%
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div ng-repeat="content in context.content">
+                            <div class="col-md-5 col-md-offset-1 colSkill">
+                                <span>{{content.nome}}</span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" style="width: {{content.porcentagem}}%;">
+                                        {{content.porcentagem}}%
                                     </div>
                                 </div>
-                            </article>
+                            </div>
                         </div>
                     </div>
-                </section>
+                </article>
             </div>
-        </main>
-        <footer>
-            <img src="../assets/img/logo.svg"><br>
-            <span>2017 - Todos os direitos reservados.</span>
-        </footer>
-
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="../assets/js/angular.min.js"></script>
-        <script src="../assets/js/angular-route.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="../assets/js/app.js"></script>
-    </body>
-</html>
+        </div>
+    </section>
+</div>

@@ -16,14 +16,18 @@ header {
 header .logo{float: left;}
 header .logo img{transition-duration: 0.5s;transition-property: all;width: 100px;margin-top: 10%;}
 header .logo img:hover{opacity: 0.5;}
-header ul{list-style: none;padding: 5px;float: right;margin-top: 2%;}
-header ul li{margin-left: 20px;display: inline-block;}
-header ul li a{text-decoration: none;color: white;transition-duration: 0.3s;transition-property: all;}
-header ul li a:hover{color: #999999;text-decoration: none;}
-header h1{text-align: center;color: #ffffff;margin-bottom: 1%;margin-top: 10%;text-transform: uppercase;}
-header p{text-align: center;color: #ffffff;margin-bottom: 1%;text-transform: uppercase;}
-header a i{color: #ffffff;width: 50px;height: 50px;border: solid 1px #ffffff;border-radius: 120px;margin: 0 auto;padding-top: 10px;transition-duration: 0.4s;transition-property: all;text-decoration: none;margin-bottom: 10%;margin-left: 1%;}
-header a i:hover{color: #999999;text-decoration: none;border: solid 1px #999999}
+nav{background-color: #000;}
+.ativo{padding-top: 50px;}
+.toggle{padding: 5px;float: right;position: fixed;right: 0;padding: 2%;padding-right: 5%;padding-top: 4%;}
+nav ul{list-style: none;padding: 5px;float: right;margin-top: 2%;}
+nav ul li{margin-left: 20px;display: inline-block;}
+nav ul li a{text-decoration: none;color: white;transition-duration: 0.3s;transition-property: all;}
+nav ul li a:hover{color: #999999;text-decoration: none;}
+.ativo{padding-top: 50px;}
+header .principal h1{text-align: center;color: #ffffff;margin-bottom: 1%;margin-top: 10%;text-transform: uppercase;}
+header .principal p{text-align: center;color: #ffffff;margin-bottom: 1%;text-transform: uppercase;}
+header .principal a i{color: #ffffff;width: 50px;height: 50px;border: solid 1px #ffffff;border-radius: 120px;margin: 0 auto;padding-top: 10px;transition-duration: 0.4s;transition-property: all;text-decoration: none;margin-bottom: 10%;margin-left: 1%;}
+header .principal a i:hover{color: #999999;text-decoration: none;border: solid 1px #999999}
 .library{height: 200px;background-color: black;background-image: url('../img/book.jpg');background-position: center center;background-repeat: no-repeat;background-size: 100% 100%;background-attachment: fixed;}
 main{}
 .news{text-align: center;}
@@ -64,4 +68,19 @@ circles span{text-align: center;}
     height: 380px;
     background-color: #f8f870;
     display: block;
+}
+/*MEDIA QUERIES*/
+.toggle{z-index: 1;}
+.menu{z-index: 2;transition: opacity 0.4s;}
+.layout{z-index: 3;}
+@media screen and (max-width: 520px) {
+  .menu{display: none;}
+  nav{position: fixed;right: 5%;right: 10%;width: 100%;}
+  .englobeNav{background-color: #000;}
+  .toggle{opacity: 1;border: solid 1px #000;background-color: #000;}
+}
+
+@media screen and (min-width: 521px) {
+  ul{display: block;}
+  .toggle{display: none;visibility: hidden;}
 }

@@ -26,31 +26,38 @@
 
     </head>
     <body ng-controller="portfolioCtrl">
-        <header>
-            <div class="container">
+        <nav class="menu">
+            <ul>
+                <li><a href="#/">Página inicial</a></li>
+                <li><a href="#sobre">Quem sou</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
 
-                <div class="logo"><img src="assets/img/logo.svg"></div>
-                <ul>
-                    <li><a href="#/">Página inicial</a></li>
-                    <li><a href="#sobre">Quem sou</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <div class="clear"></div>
-                <h1><strong>Leonardo</strong> R. Castellano</h1>
-                <p>O impossível é o que ainda não tentei.</p>
-                <a href="https://github.com/MrSlyte/" target="_blank"><i class="fa fa-github-alt fa-2x"></i></a>
-            </div>
-        </header>
-        <main>
-            <div ng-view></div>
-            
-        </main>
-        <footer>
-            <img src="assets/img/logo.svg"><br>
-            <span>2017 - Todos os direitos reservados.</span>
-        </footer>
+        </nav>
+        <a href="javascript:;" class="toggle"><i class="fa fa-bars"></i></a>
+        <div class="layout">
+            <header>
+                <div class="container">
 
+                    <div class="logo"><img src="assets/img/logo.svg"></div>
+                    <div class="clear"></div>
+                    <div class="principal">
+                        <h1><strong>Leonardo</strong> R. Castellano</h1>
+                        <p>O impossível é o que ainda não tentei.</p>
+                        <a href="https://github.com/MrSlyte/" target="_blank"><i class="fa fa-github-alt fa-2x"></i></a>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div ng-view></div>
+
+            </main>
+            <footer>
+                <img src="assets/img/logo.svg"><br>
+                <span>2017 - Todos os direitos reservados.</span>
+            </footer>
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="assets/js/angular.min.js"></script>
@@ -58,5 +65,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <script src="assets/js/app.js"></script>
         <script src="assets/js/config.js"></script>
+        <script src="assets/js/function.js"></script>
     </body>
 </html>

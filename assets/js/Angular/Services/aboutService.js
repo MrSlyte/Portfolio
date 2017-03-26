@@ -1,9 +1,11 @@
 angular.module("portfolio").service('aboutService', function () {
+    //Simulando o retorno de dados de um webservice
     this.sections = [
         {id: 1, nome: "linguagens", section: "Linguagens"},
         {id: 2, nome: "bancoDados", section: "Banco de Dados"},
         {id: 3, nome: "habilidades", section: "Habilidades"}
     ];
+    //Simulando o retorno de dados de um webservice
     this.itensSection = [
         {nome: "PHP", porcentagem: 80, section: 1},
         {nome: "C#", porcentagem: 70, section: 1},

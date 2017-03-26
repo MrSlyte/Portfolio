@@ -37,6 +37,7 @@ main{}
 .about{text-align: center;margin-bottom: 5%;}
 .about button{background-color: transparent;width: 150px;text-align: center;border: solid 1px black;padding: 10px;transition-duration: 0.3s;transition-property: background-color;}
 .about button:hover{background-color: #999}
+.collSkill{text-align: left;}
 
 footer {text-align: center;margin: 0 auto;display: block;padding-bottom: 50px;margin-top: 5%;background-color: #ccccff}
 footer img{margin-bottom: 2%;width: 100px;margin-top: 5%;}
@@ -48,27 +49,10 @@ circles span{text-align: center;}
 .colSkill{text-align: left !important;}
 .progress{width: 70% !important;}
 
-.form{
-    float: left;
-    margin-left: auto;
-    width: 40%;
-    padding: 0;
-    margin: 0;
-    margin-right: auto;
+.textAreaLimit{
+    resize: vertical; max-height: 400px; min-height: 100px;
 }
-.formVisualize h4{
-    text-align: center;
-}
-.formVisualize{
-    padding: 1%;
-    text-align: left;
-    float: right;
-    border: solid 1px #000000;
-    width: 40%;
-    height: 380px;
-    background-color: #f8f870;
-    display: block;
-}
+
 /*MEDIA QUERIES*/
 .toggle{z-index: 1;}
 .menu{z-index: 2;transition: opacity 0.4s;}

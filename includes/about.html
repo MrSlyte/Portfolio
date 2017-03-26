@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container" ng-controller="aboutController">
+    {{}}
     <section class="about">
         <h3>Sobre mim!</h3>
         <div class="row">
@@ -12,26 +13,25 @@
                     estou sempre estudando e aprimorando meus conhecimentos. Eu poderia colocar 
                     dezenas de qualidades e defeitos aqui, mas, acredito que vendo as habilidades abaixo
                     você terá uma boa base sobre mim!
+
                 </p>
             </div>
         </div>
         <div class="container">
-            <div ng-repeat="context in sections">
-                <article class="{{context.section}}">
-                    <h4>{{context.section}}</h4>
-                    <div class="row">
-                        <div ng-repeat="content in context.content">
-                            <div class="col-md-5 col-md-offset-1 colSkill">
-                                <span>{{content.nome}}</span>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped" style="width: {{content.porcentagem}}%;">
-                                        {{content.porcentagem}}%
-                                    </div>
+            <div ng-repeat="sessoes in sections">
+                <h4>{{sessoes.section}}</h4>
+                <div class="row">
+                    <div ng-repeat="itensSessao in itensSection" ng-if="sessoes.id === itensSessao.section">
+                        <div class="col-md-5 col-md-offset-1 collSkill">
+                            <span>{{itensSessao.nome}}</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped" style="width: {{itensSessao.porcentagem}}%;">
+                                    {{itensSessao.porcentagem}}%
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </div>            
+                </div>
             </div>
         </div>
     </section>

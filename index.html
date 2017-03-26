@@ -23,12 +23,9 @@
         <![endif]-->
     </head>
     <body>
-        <nav class="menu">
-            <ul>
-                <li><a href="#/">Página inicial</a></li>
-                <li><a href="#sobre">Quem sou</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#contato">Contato</a></li>
+        <nav class="menu" ng-controller="MenuController">
+            <ul ng-repeat="itemMenu in menu | orderBy: $index">
+                <li><a href="{{itemMenu.src}}">{{itemMenu.displayName}}</a></li>
             </ul>
         </nav>
         <a href="javascript:;" class="toggle"><i class="fa fa-bars"></i></a>
@@ -60,13 +57,15 @@
         
         <!--ANGULAR ESSENTIALS-->
         <script src="assets/js/Angular/Essentials/app.js"></script>
-        <script src="assets/js/Angular/Essentials/config.js"></script>
+        <script src="assets/js/Angular/Essentials/routeConfig.js"></script>
 
         <!--ANGULAR CONTROLLERS-->
         <script src="assets/js/Angular/Controllers/aboutController.js"></script>
+        <script src="assets/js/Angular/Controllers/MenuController.js"></script>
         
         <!--ANGULAR SERVICES-->
         <script src="assets/js/Angular/Services/aboutService.js"></script>
+        <script src="assets/js/Angular/Services/MenuService.js"></script>
         
         <!--JQUERY-->
         <script src="assets/js/Jquery/function.js"></script>

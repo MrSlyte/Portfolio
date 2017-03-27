@@ -55,7 +55,9 @@ circles span{text-align: center;}
 
 /*MEDIA QUERIES*/
 .toggle{z-index: 1;}
-.menu{z-index: 2;transition: opacity 0.4s;}
+.menu{z-index: 2;transition: opacity 0.4s;margin-right: 5%;}
+.menu a{text-decoration:none;}
+.menu a:hover{text-decoration: none;}
 .layout{z-index: 3;}
 @media screen and (max-width: 520px) {
   .menu{display: none;}
